@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&M Foods</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section class="initial-page">
+        <h1>M&M POS</h1>
+        <button onclick="showModal()">Create Order</button>
+    </section>
+    <div class="modal-overlay" id="modal">
+        <div class="order-modal">
+            <div>
+                <button id="closeBtn" onclick="closeModal()">X</button>
+            </div>
+            <h2>Create Order</h2>
+            <div id="name-page">
+                <input id="name-input" type="text" name="name" placeholder="Customer Name">
+                <p class="validator" id="name-validator">Customer Name cannot be empty</p>
+                <button onclick="validate(1)">Next</button>
+            </div>
+            <div id="product-page">
+                <select id="product-dropdown" name="product-dropdown">
+                    <option value="Seitan Pastil">Seitan Pastil</option>
+                    <option value="Seitan Lumpia (10pc Pack)">Seitan Lumpia</option>
+                </select>
+                <input id="quantity-input" type="number" name="quantity" placeholder="Quantity">
+                <p class="validator" id="quantity-validator">Quantity cannot be empty</p>
+                <button onclick="validate(2)">Next</button>
+            </div>
+            <div id="payment-page">
+                <p>Total:</p>
+                <p id="total"><b>₱</b><b id="total-order-price">900</b></p>
+                <select name="payment-dropdown">
+                    <option value="Payment Pending">Payment Pending</option>
+                    <option value="Paid - Order in Process">Paid - Order in Process</option>
+                    <option value="Paid - Waiting for Delivery">Paid - Waiting for Delivery</option>
+                    <option value="Paid with Balance">Paid with Balance</option>
+                    <option value="Order Completed with Balance">Order Completed with Balance</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <button onclick="nextPage(3)">View QR Codes</button>
+                <button id="done-btn">Done</button>
+            </div>
+            <div id="QR-page">
+                <div>
+                    <img src="assets/img/gcash.jpg" alt="">
+                    <img src="assets/img/maya.jpg" alt="">
+                    <img src="assets/img/UB.jpg" alt="">
+                    <button id="done-btn" onclick="nextPage(2)">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <form method="POST" action="https://script.google.com/macros/s/AKfycbweNJUaWyRdwCSujUBYbAi7AJ8qsXK7yPLSCmhy-h2vHgyMJDfVKULaZrnKEiEVyf05/exec">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+      
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+      
+        <label for="message">Message:</label>
+        <textarea name="message" required></textarea><br>
+      
+        <button type="submit">Send</button>
+    </form> -->
+    <script src="js/main.js"></script>
+</body>
+</html>

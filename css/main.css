@@ -1,0 +1,149 @@
+body {
+  margin: auto;
+  background-color: #f0f0f0;
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  padding: 2.5em;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section h1 {
+  margin-bottom: 50px;
+  font-size: 45px;
+}
+section button {
+  color: #ffffff;
+  background-color: #4CAF50;
+  font-size: 19px;
+  border: 1px solid #4CAF50;
+  border-radius: 15px;
+  padding: 15px 50px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+section button:hover {
+  color: #00d1b2;
+  background-color: #ffffff;
+}
+
+.initial-page {
+  text-align: center;
+}
+
+.create-order-section {
+  display: block;
+}
+
+/* Modal Background (Overlay) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+/* Show modal class */
+.modal-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Modal Content */
+.order-modal {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.order-modal h2 {
+  margin-bottom: 15px;
+  margin-top: 0px;
+  color: #333;
+}
+
+.order-modal input,
+.order-modal select,
+.order-modal button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.order-modal button {
+  margin-top: 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.order-modal button:hover {
+  background-color: #45a049;
+}
+
+#closeBtn {
+  width: 30px;
+  margin: 0 0 0 auto;
+}
+
+#done-btn {
+  margin-top: 10px;
+}
+
+#name-input {
+  margin-bottom: 0px;
+}
+
+#quantity-input {
+  margin-bottom: 0px;
+}
+
+#payment-page p {
+  margin-bottom: 0px;
+}
+#payment-page #total {
+  margin-top: 0px;
+  font-size: 30px;
+}
+
+.validator {
+  margin: 0;
+  font-size: 13px;
+  color: red;
+  visibility: hidden;
+}
+
+#QR-page {
+  height: 80vh;
+  overflow-y: auto;
+}
+#QR-page img {
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
