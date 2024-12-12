@@ -34,7 +34,7 @@
             <div id="payment-page">
                 <p>Total:</p>
                 <p id="total"><b>₱</b><b id="total-order-price">900</b></p>
-                <select name="payment-dropdown">
+                <select id="payment-dropdown" name="payment-dropdown">
                     <option value="Payment Pending">Payment Pending</option>
                     <option value="Paid - Order in Process">Paid - Order in Process</option>
                     <option value="Paid - Waiting for Delivery">Paid - Waiting for Delivery</option>
@@ -43,7 +43,7 @@
                     <option value="Completed">Completed</option>
                 </select>
                 <button onclick="nextPage(3)">View QR Codes</button>
-                <button id="done-btn">Done</button>
+                <button id="done-btn" onclick="sendData()">Done</button>
             </div>
             <div id="QR-page">
                 <div>

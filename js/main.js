@@ -64,3 +64,37 @@ function validate(index) {
             break;
     }
 }
+
+function sendData(){
+    var name = document.getElementById("name-input").value;
+    var order = document.getElementById("product-dropdown").value;
+    var quantity = document.getElementById("quantity-input").value;
+    var status = document.getElementById("payment-dropdown").value;
+
+    const postData = {
+        name: name,
+        order: order,
+        quantity: quantity,
+        status: status
+    };
+    
+    // Send the POST request
+    fetch('https://script.google.com/macros/s/AKfycbwEeTHHxvcBsuiikCOpLrcv2NDIg5bs3OSlXX3DxdoeilY1SN7xJs9mJRVOLXTg0ofi/exec', {
+        method: 'POST',          // HTTP method (POST)
+        headers: {
+            'Content-Type': 'application/json',  // The content type of the request body
+        },
+        body: JSON.stringify(postData),  // Convert the data to a JSON string
+    })
+    .then(response => response.json())  // Parse the JSON response
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+
+    console.log("details: " + name + ", " + order + ", " + quantity + ", " + status);
+
+}
