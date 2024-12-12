@@ -79,7 +79,7 @@ function sendData(){
     };
     
     // Send the POST request
-    fetch('https://script.google.com/macros/s/AKfycbw0K5I8C6bLQFf9TV6PhvOrrPgwx4W_2FbLQTS_Myg_PR352FcsCmrFOYw6sMKMaTy4/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxMMM1GD3RkhSST7xysDZy6mRR6eFPhUBDIf5n0p3b4lESzb3qq_Ra1Yx11YgS45Bu3/exec', {
         method: 'POST',          // HTTP method (POST)
         headers: {
             'Content-Type': 'application/json',  // The content type of the request body
