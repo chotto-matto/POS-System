@@ -80,6 +80,7 @@ function sendData(){
     
     // Send the POST request
     fetch('https://script.google.com/macros/s/AKfycbxMMM1GD3RkhSST7xysDZy6mRR6eFPhUBDIf5n0p3b4lESzb3qq_Ra1Yx11YgS45Bu3/exec', {
+        mode: 'no-cors',
         method: 'POST',          // HTTP method (POST)
         headers: {
             'Content-Type': 'application/json',  // The content type of the request body
