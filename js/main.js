@@ -87,7 +87,7 @@ function sendData(){
         },
         body: JSON.stringify(postData),  // Convert the data to a JSON string
     })
-    .then(console.log(response))  // Parse the JSON response
+    .then(response => console.log(response))  // Parse the JSON response
     .then(data => {
         console.log('Success:', data);
     })
